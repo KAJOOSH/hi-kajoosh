@@ -1,5 +1,4 @@
 name: CD-Liara
-
 on:
   push:
     branches: [master]
@@ -16,5 +15,5 @@ jobs:
         env:
           LIARA_TOKEN: ${{ secrets.LIARA_API_TOKEN }}
         run: |
-          npm i -g @liara/cli@3
+          npm i -g @liara/cli@
           liara deploy --app="kajoosh" --api-token="$LIARA_TOKEN" --detach
